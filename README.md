@@ -20,3 +20,12 @@
 - Todo
     - Continue lendo a apostila até terminar a parte de Excessões Cap 12.
     - Faça e teste algumas alterações no atropelamento de pets.
+
+## S03E01
+- Implementação da Calculadora em Java
+- Introdução de Entrada e Saída.
+- Uso de excessões para comunicar erros.
+- Separação entre classe interna(Backend) e classe de Comunicação com o Usuário(Frontend).
+- Apresentação da classe de auxílio (Poo.java)
+- Todo
+    - Estudar e mexer no código da Calculadora.
