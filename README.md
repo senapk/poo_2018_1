@@ -1,5 +1,9 @@
 # Disciplina de POO
 
+## Trabalhos para postar no git
+Nomes das pastas
+- 01_contato
+
 ## Lins Importantes
 - Chat do Hangout: [link](https://hangouts.google.com/group/HKnYN7jQvwry2lOw1)
 - Repositório com as Descrições dos Trabalhos: [link](https://qxcodepoo.github.com)
