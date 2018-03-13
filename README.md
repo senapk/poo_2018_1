@@ -19,7 +19,7 @@
 - Alguns exemplos de entrada e saída, ArrayList e controle de Fluxo.
 - Todo
     - Continue lendo a apostila até terminar a parte de Excessões Cap 12.
-    - Faça e teste algumas alterações no atropelamento de pets.
+    - Faça e teste algumas alterações no atropelamento de pets. 
 
 ## S03E01
 - Implementação da Calculadora em Java
