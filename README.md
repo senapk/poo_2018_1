@@ -29,3 +29,10 @@
 - Apresentação da classe de auxílio (Poo.java)
 - Todo
     - Estudar e mexer no código da Calculadora.
+
+## S03E02
+- Tirando dúvidas sobre o código da calculadora.
+    - excessões, construtores, passagem de parâmetros, equals, sobrecarga de métodos. 
+    - Exemplos estão no readme da pasta.
+- Todo
+    - Fazer o projeto "Contato" do site.
