@@ -40,3 +40,8 @@ Nomes das pastas
     - Exemplos estão no readme da pasta.
 - Todo
     - Fazer o projeto "Contato" do site.
+
+## S05E01
+- Fazendo a atividade da sala de cinema.
+- TODO
+    - Estudar a atividade da sala de cinema
