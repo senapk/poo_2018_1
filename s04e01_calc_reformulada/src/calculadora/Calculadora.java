@@ -2,7 +2,6 @@ package calculadora;
 
 import java.util.Scanner;
 
-
 public class Calculadora {
 	static final int bateriaInicial = 2;
 	static final int bateriaMaxima = 5;
@@ -20,20 +19,22 @@ public class Calculadora {
 		if(this.bateria > Calculadora.bateriaMaxima)
 			this.bateria = Calculadora.bateriaMaxima;
 	}
-	
-	float soma(float a, float b) throws Exception{
+	void gastarBateria() {
 		if(this.bateria == 0)
-			throw new Exception("bateria insuficiente");
+			throw new RuntimeException("fail: bateria insuficiente");
+		this.bateria -= 1;
+	}
+	
+	float soma(float a, float b){
+		this.gastarBateria();
 		this.bateria -= 1;
 		return a + b;
 	}
 	
-	float divisao(float num, float den) throws Exception{
-		if(this.bateria == 0)
-			throw new Exception("bateria insuficiente");
+	float divisao(float num, float den){
+		this.gastarBateria();
 		if(den == 0f)
-			throw new Exception("divisao por 0");
-		this.bateria -= 1;
+			throw new RuntimeException("fail: divisao por 0");
 		return num/den;
 	}
 	
@@ -50,23 +51,25 @@ class Controller{
 		calc = new Calculadora();
 	}
 	
+	//recebe uma string e tenta converter em float
 	private float toFloat(String s) {
 		return Float.parseFloat(s);
 	}
 	
-	public String oracle(String line) throws Exception {
+	//nossa funcao oraculo que recebe uma pergunta e retorna uma resposta
+	public String oracle(String line){
 		String ui[] = line.split(" ");
 
-		if(ui[0].equals("show"))
+		if(ui[0].equals("help"))
+			return "sum _a _b\nshow\ndiv _a _b\ncharge _value";
+		else if(ui[0].equals("show"))
 			return "" + calc;
 		else if(ui[0].equals("charge"))
 			calc.charge(Integer.parseInt(ui[1]));
 		else if(ui[0].equals("soma"))
-			return "= " + calc.soma(toFloat(ui[1]),
-									toFloat(ui[2]));
+			return "= " + calc.soma(toFloat(ui[1]), toFloat(ui[2]));
 		else if(ui[0].equals("div"))
-			return "= " + calc.divisao(toFloat(ui[1]),
-									   toFloat(ui[2]));
+			return "= " + calc.divisao(toFloat(ui[1]), toFloat(ui[2]));
 		else
 			return "comando invalido";
 		return "done";
@@ -74,25 +77,28 @@ class Controller{
 }
 
 class IO {
-	static Scanner scan;
+	//cria um objeto scan para ler strings do teclado
+	static Scanner scan = new Scanner(System.in);
 	
-	public IO(){
-		scan = new Scanner(System.in);
+	//aplica um tab e retorna o texto tabulado com dois espaços
+	static private String tab(String text){
+		return "  " + String.join("\n  ", text.split("\n"));
 	}
 	
 	public static void main(String[] args) {
 		Controller cont = new Controller();
+		System.out.println("Digite um comando ou help:");
 		while(true){
-			System.out.println("Digite um comando:");
 			String line = scan.nextLine();
 
 			try {
-				System.out.println(cont.oracle(line));
+				//se não der problema, faz a pergunta e mostra a resposta
+				System.out.println(tab(cont.oracle(line)));
 			}catch(Exception e) {
-				System.out.println(e.getMessage());
+				//se der problema, mostre o erro que deu
+				System.out.println(tab(e.getMessage()));
 			}
 		}
-
 	}
 }
 
