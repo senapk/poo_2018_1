@@ -68,7 +68,6 @@ public class IO {
         System.out.println("Digite um comando ou help:");
         while(true){
             String line = scan.nextLine();
-
             try {
                 //se não der problema, faz a pergunta e mostra a resposta
                 System.out.println(tab(cont.oracle(line)));
