@@ -45,3 +45,8 @@ Nomes das pastas
 - Fazendo a atividade da sala de cinema.
 - TODO
     - Estudar a atividade da sala de cinema
+
+## S06E01 - Conta Bancária
+## S06E02 - Revisão Cinema
+    - TODO
+        - Fazer o projeto do Agiota para daqui a 15 dias.
