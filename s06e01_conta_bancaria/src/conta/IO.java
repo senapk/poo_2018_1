@@ -2,6 +2,7 @@ package conta;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 class Operacao{
 	String descricao;
@@ -95,7 +96,7 @@ public class IO {
         return "  " + String.join("\n  ", text.split("\n"));
     }
     
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         Controller cont = new Controller();
         System.out.println("Digite um comando ou help:");
         while(true){
@@ -109,6 +110,15 @@ public class IO {
             }
         }
     }
+    public static void main(String[] args) {
+		ArrayList<Operacao> aop = new ArrayList<Operacao>();
+		aop.add(new Operacao("um", 1, 1.1f));
+		aop.add(new Operacao("dois", 2, 2.2f));
+		aop.add(new Operacao("tres", 3, 3.3f));
+		System.out.println(aop.stream().map(Object::toString)
+                .collect(Collectors.joining("\n")));
+		
+	}
 }
 
 

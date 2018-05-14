@@ -3,6 +3,11 @@
 ## Trabalhos para postar no git
 Nomes das pastas
 - 01_contato
+- 02_junkfood
+- 03_agiota
+- 04_agencia (refazer agencia utilizando repositórios)
+- 05_anotacoes
+- 06_clinica_veterinaria
 
 ## Lins Importantes
 - Chat do Hangout: [link](https://hangouts.google.com/group/HKnYN7jQvwry2lOw1)
