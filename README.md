@@ -8,6 +8,10 @@ Nomes das pastas
 - 04_agencia (refazer agencia utilizando repositórios)
 - 05_anotacoes
 - 06_clinica_veterinaria
+- 07_twitter
+- 08_agenda_hibrida
+- 09_whatsapp
+- 10_mercantil
 
 ## Lins Importantes
 - Chat do Hangout: [link](https://hangouts.google.com/group/HKnYN7jQvwry2lOw1)
