@@ -1,0 +1,7 @@
+banco caixa
+banco dinheiro
+banco seguranca
+banco cofre
+ufc estudante
+ufc professor
+ufc agua
