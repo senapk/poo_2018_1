@@ -11,7 +11,7 @@ Nomes das pastas
 - 07_twitter
 - 08_agenda_hibrida
 - 09_whatsapp
-- 10_mercantil
+- 10_whatsapp2
 
 ## Lins Importantes
 - Chat do Hangout: [link](https://hangouts.google.com/group/HKnYN7jQvwry2lOw1)
